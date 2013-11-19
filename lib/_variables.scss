@@ -233,10 +233,17 @@ $screen-lg:                  1200px !default;
 $screen-lg-min:              $screen-lg !default;
 $screen-lg-desktop:          $screen-lg-min !default;
 
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-xl:                  1380px !default;
+$screen-xl-min:              $screen-xl !default;
+$screen-xl-desktop:          $screen-xl-min !default;
+
 // So media queries don't overlap when required, provide a maximum
 $screen-xs-max:              ($screen-sm-min - 1) !default;
 $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
+$screen-lg-max:              ($screen-xl-min - 1) !default;
 
 
 // Grid system
@@ -245,7 +252,7 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 // Number of columns in the grid system
 $grid-columns:              12 !default;
 // Padding, to be divided by two and applied to the left and right of all columns
-$grid-gutter-width:         30px !default;
+$grid-gutter-width:         16px !default;
 // Point at which the navbar stops collapsing
 $grid-float-breakpoint:     $screen-sm-min !default;
 
@@ -635,3 +642,7 @@ $container-md:                 $container-desktop !default;
 // Large screen / wide desktop
 $container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
 $container-lg:                 $container-large-desktop !default;
+
+// Extra-large screen / extra-wide desktop
+$container-extra-large-desktop:      ((1400px + $grid-gutter-width)) !default;
+$container-xl:                 $container-extra-large-desktop !default;

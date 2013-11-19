@@ -91,3 +91,15 @@
   @include make-grid($grid-columns, lg, offset);
 }
 
+//Custom grids
+@media (min-width: $screen-xl-min) {
+  .container {
+    width: $container-xl;
+  }
+
+  @include make-grid-columns-float(xl);
+  @include make-grid($grid-columns, xl, width);
+  @include make-grid($grid-columns, xl, pull);
+  @include make-grid($grid-columns, xl, push);
+  @include make-grid($grid-columns, xl, offset);
+}
