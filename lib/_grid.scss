@@ -103,3 +103,15 @@
   @include make-grid($grid-columns, xl, push);
   @include make-grid($grid-columns, xl, offset);
 }
+
+@media (min-width: $screen-xxl-min) {
+  .container {
+    width: $container-xxl;
+  }
+
+  @include make-grid-columns-float(xxl);
+  @include make-grid($grid-columns, xxl, width);
+  @include make-grid($grid-columns, xxl, pull);
+  @include make-grid($grid-columns, xxl, push);
+  @include make-grid($grid-columns, xxl, offset);
+}

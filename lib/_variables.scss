@@ -235,16 +235,23 @@ $screen-lg-desktop:          $screen-lg-min !default;
 
 // Large screen / wide desktop
 // Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
-$screen-xl:                  1366px !default;
+$screen-xl:                  1346px !default;
 $screen-xl-min:              $screen-xl !default;
 $screen-xl-desktop:          $screen-xl-min !default;
+
+
+// Large screen / wide desktop
+// Note: Deprecated $screen-lg and $screen-lg-desktop as of v3.0.1
+$screen-xxl:                  1900px !default;
+$screen-xxl-min:              $screen-xxl !default;
+$screen-xxl-desktop:          $screen-xxl-min !default;
 
 // So media queries don't overlap when required, provide a maximum
 $screen-xs-max:              ($screen-sm-min - 1) !default;
 $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
 $screen-lg-max:              ($screen-xl-min - 1) !default;
-
+$screen-xl-max:              ($screen-xxl-min - 1) !default;
 
 // Grid system
 // --------------------------------------------------
@@ -644,5 +651,9 @@ $container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
 $container-lg:                 $container-large-desktop !default;
 
 // Extra-large screen / extra-wide desktop
-$container-extra-large-desktop:      ((1366px - $grid-gutter-width * 2)) !default;
+$container-extra-large-desktop:      (($screen-xl - $grid-gutter-width * 2)) !default;
 $container-xl:                 $container-extra-large-desktop !default;
+
+// Extra-Extra-large screen / extra-extra-wide desktop
+$container-extra-extra-large-desktop:      (($screen-xxl - $grid-gutter-width * 2)) !default;
+$container-xxl:                 $container-extra-extra-large-desktop !default;
